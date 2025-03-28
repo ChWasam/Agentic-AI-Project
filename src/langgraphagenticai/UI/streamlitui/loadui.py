@@ -30,10 +30,13 @@ class LoadStreamlitUI:
 
     #  this is just about what are the keys that we are saving in the session 
     # initialize_session(self) is to make sure to create all those keys so that the session is being mentained 
+    #  Once we initialize the session all the keys will be specifically available so that you can maintain the state 
+    # 
     def initialize_session(self):
         return {
         #  All These keys are basially used in the later stages when we build more applications rn it is not required so don't worry about it 
         # as we will build more usecases we will talk specificly where we are using this 
+    
         "current_step": "requirements",
         "requirements": "",
         "user_stories": "",

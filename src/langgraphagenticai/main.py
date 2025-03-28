@@ -28,6 +28,12 @@ def load_langgraph_agenticai_app():
     else :
         user_message = st.chat_input("Enter your message:")
 
+    #  First all this will be visible over here / ui is loaded 
+    #  Then we will say hey the person is giving any type of input or not 
+    #  if giving input then we will load the llm models by using the key specfied in that particular field 
+    #  load_streamlit_ui() has all the information because here we have something called user controls 
+     
+
     if user_message:
             try:
                 # Configure LLM

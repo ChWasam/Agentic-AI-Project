@@ -72,3 +72,5 @@ class GraphBuilder:
         return self.graph_builder.compile()
     
 
+#  ow we also need to be stream it. Now the main part come that how we need to stream it 
+#  And how do we go ahead and display the results 

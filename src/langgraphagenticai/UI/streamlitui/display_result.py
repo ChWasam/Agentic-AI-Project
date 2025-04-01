@@ -1,4 +1,4 @@
-#  This will be our file to display the data in our frontend 
+#  This will be our file to display the data in our frontend
 
 
 import streamlit as st

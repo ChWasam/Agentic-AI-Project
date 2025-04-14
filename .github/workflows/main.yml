@@ -1,0 +1,38 @@
+# Here we are creating an event 
+name: Sync to Hugging Face Space
+on: # means on which event what kind of action we need to make . Here event is on 
+  push: # Action is push 
+    branches: [main] # here it is pushing to code towards which baranch 
+
+    #  Main barach is here also in the higging face space
+
+  # to run this workflow manually from the Actions tab 
+  workflow_dispatch:
+
+#  To run this workflwow we will create this jobs
+
+jobs:
+  sync-to-hub: # This is anothe event 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3 # Get all the libraries that are required for all the githib actions 
+        with:
+          fetch-depth: 0
+          lfs: false
+          
+      - name: Ignore large files
+        run : git filter-branch --index-filter 'git rm -rf --cached --ignore-unmatch "Rag_Documents/layout-parser-paper.pdf"' HEAD
+        #  if any documents is there we can push that documents 
+
+      # When we push to the hub in the environment variable we need to set the token 
+      # This token is your higging face token 
+      # Make new token to add in env and make sure to select the token type to write since we have to write in that particular server 
+      - name: Push to hub
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: git push --force https://genaitiwari:$HF_TOKEN@huggingface.co/spaces/genaitiwari/agenticai main # Url we need to goahead and push 
+        # How this url is generated is very important 
+        #  this is the spaces url 
+        # url is => https , username , hftoken (coming from above line ), and entire huggingface space url
+        #  main at the end is the branch name => from which branch we are pushing the code
+        # as soon as we push the code to the main branch it will be automatically pushed to the hugging face space

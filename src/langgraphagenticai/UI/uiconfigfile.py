@@ -10,7 +10,7 @@ class Config:
         self.config.read(config_file)
 
     def get_llm_options(self):
-        return self.config["DEFAULT"].get("LLM_OPTIONS").split(", ")
+        return self.config["DEFAULT"].get("LLM_OPTIONS","").split(", ")
     # self.config["DEFAULT"] It has basically the excess of all the fields that is defined over here 
     # DEFAULT  is basically the root name for all the information that is present inside this 
     #  split(", ") means it will split by comma, if there is no comma it will not split over here

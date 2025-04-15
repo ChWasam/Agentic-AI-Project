@@ -52,6 +52,8 @@ class LoadStreamlitUI:
 
     #  Over here we have set our basic page configuration 
 
+
+
     def load_streamlit_ui(self):
         #  Basic configurations with respect to the streamlit 
         st.set_page_config(page_title= "🤖 " + self.config.get_page_title(), layout="wide")

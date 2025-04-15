@@ -12,7 +12,7 @@ from datetime import date
 
 #  The message that we are going to write im the ui page is either human mesage or ai message 
 from langchain_core.messages import AIMessage,HumanMessage
-from src.langgraphagenticai.ui.uiconfigfile import Config
+from src.langgraphagenticai.UI.uiconfigfile import Config
 
 # src.langgraphagenticai.ui.uiconfigfile  => This is actually the modular structure 
 

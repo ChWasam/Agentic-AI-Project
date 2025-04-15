@@ -1,9 +1,9 @@
 import streamlit as st
 import json
-from src.langgraphagenticai.ui.streamlitui.loadui import LoadStreamlitUI
+from src.langgraphagenticai.Ui.streamlitui.loadui import LoadStreamlitUI
 from src.langgraphagenticai.LLMS.groqllm import GroqLLM
 from src.langgraphagenticai.graph.graph_builder import GraphBuilder
-from src.langgraphagenticai.ui.streamlitui.display_result import DisplayResultStreamlit
+from src.langgraphagenticai.Ui.streamlitui.display_result import DisplayResultStreamlit
 
 # MAIN Function START
 def load_langgraph_agenticai_app():

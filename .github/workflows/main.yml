@@ -36,4 +36,3 @@ jobs:
         # url is => https , username , hftoken (coming from above line ), and entire huggingface space url
         #  main at the end is the branch name => from which branch we are pushing the code
         # as soon as we push the code to the main branch it will be automatically pushed to the hugging face space
-        chwasam/langgraph_chatbot

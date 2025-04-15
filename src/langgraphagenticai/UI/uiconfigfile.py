@@ -15,10 +15,10 @@ class Config:
     # DEFAULT  is basically the root name for all the information that is present inside this 
     #  split(", ") means it will split by comma, if there is no comma it will not split over here
     def get_usecase_options(self):
-        return self.config["DEFAULT"].get("USECASE_OPTIONS").split(", ")
+        return self.config["DEFAULT"].get("USECASE_OPTIONS","").split(", ")
 
     def get_groq_model_options(self):
-        return self.config["DEFAULT"].get("GROQ_MODEL_OPTIONS").split(", ")
+        return self.config["DEFAULT"].get("GROQ_MODEL_OPTIONS","").split(", ")
 
     def get_page_title(self):
-        return self.config["DEFAULT"].get("PAGE_TITLE")
+        return self.config["DEFAULT"].get("PAGE_TITLE","")

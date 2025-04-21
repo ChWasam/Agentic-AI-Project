@@ -58,7 +58,7 @@ class LoadStreamlitUI:
         #  Basic configurations with respect to the streamlit 
         page_title = self.config.get_page_title() or "Default Title"
         st.set_page_config(page_title= "🤖 " + page_title, layout="wide")
-        st.header("🤖 " + page_title)
+        st.header("🤖 " + page_title )
         st.session_state.timeframe = ''
         st.session_state.IsFetchButtonClicked = False
         st.session_state.IsSDLC = False
